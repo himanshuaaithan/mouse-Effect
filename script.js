@@ -1,16 +1,19 @@
-var elem = document.querySelectorAll(".elam");
+let div = document.querySelectorAll("#div")
 
-elem.forEach(function (val) {9
-    val.addEventListener("mouseenter", function () {
-        val.childNodes[3].style.opacity = 1
-    });
 
-    val.addEventListener("mouseleave", function () {
-        val.childNodes[3].style.opacity = 0
-    });
+div.forEach(function (elem) {
+    elem.addEventListener("mouseenter", function () {
+       elem.childNodes[3].style.opacity=1;
+    })
 
-    val.addEventListener("mousemove", function (dets) {
-        val.childNodes[3].style.left = dets.x+"px"
-    });
+     elem.addEventListener("mousemove", function (dets) {
+      elem.childNodes[3].style.left=dets.x+"px"
+    })
 
-}); 
+
+     elem.addEventListener("mouseleave", function () {
+       elem.childNodes[3].style.opacity=0
+    })
+})
+
+
